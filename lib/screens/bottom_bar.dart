@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:ticketbooking/screens/home_screen.dart';
+import 'package:ticketbooking/screens/search_screen.dart';
 
 class BottomBar extends StatefulWidget {
   const BottomBar({super.key});
@@ -21,7 +22,7 @@ class _BottomBarState extends State<BottomBar> {
 
   static final List<Widget> _widgetsOptions = <Widget>[
     const HomeScreen(),
-    const Text("Search"),
+    const SearchScreen(),
     const Text("Ticket"),
     const Text("Profile"),
   ];
@@ -29,11 +30,6 @@ class _BottomBarState extends State<BottomBar> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text(
-          "Ticket Booking",
-        ),
-      ),
       body: Center(child: _widgetsOptions[_selectedIndex]),
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
