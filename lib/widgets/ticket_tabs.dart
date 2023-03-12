@@ -26,6 +26,7 @@ class AppTicketTabs extends StatelessWidget {
             child: Center(child: Text(firstTab)),
           ),
           /* Hotels */
+          
           Container(
             width: size.width * 0.44,
             padding: EdgeInsets.symmetric(vertical: AppLayout.getHeight(7)),
